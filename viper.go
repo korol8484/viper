@@ -966,6 +966,7 @@ func (v *Viper) Sub(key string) *Viper {
 		subv.envPrefix = v.envPrefix
 		subv.envKeyReplacer = v.envKeyReplacer
 		subv.config = cast.ToStringMap(data)
+		subv.keyDelim = v.keyDelim
 		return subv
 	}
 	return nil
